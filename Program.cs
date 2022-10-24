@@ -1,16 +1,26 @@
-﻿namespace Kescha.Classes
+﻿using Kescha.Classes;
+
+namespace Kescha.App;
+public class Kescha
 {
-    public class Kescha
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        // Simple Authentication
+        string? password;
+        do
         {
-            int keschaAge = 3;
-            Console.Write("Type your name: ");
-            string? firstName = Console.ReadLine();
-            Console.Write($"Hey {firstName}! Type your age: ");
-            int? age = Convert.ToInt32(Console.ReadLine());
-            int? ageDifference = age - keschaAge;
-            Console.WriteLine($"The difference between {firstName}'s and kescha's age is {ageDifference}");
-        }
+            Console.Write("Enter your password: ");
+            password = Console.ReadLine();
+        } while (password != "elbek2001");
+
+        // User informations
+        Console.Write("Enter your name: ");
+        string? nameOfUser = Console.ReadLine();
+        Console.Write($"Hey {nameOfUser}! Enter your age: ");
+        int? ageOfUser = Convert.ToInt32(Console.ReadLine());
+
+        Animal kescha = new(nameOfUser, ageOfUser, ageOfAnimal: 3);
+        kescha.InformationsOfAge();
+        kescha.FriendsOfKescha();
     }
 }
