@@ -24,7 +24,7 @@ public class Animal
             ? "You are equal to kescha"
             : "You are younger than kescha";
         Console.WriteLine($"Comparision: {compareAge}");
-        Console.WriteLine($"The difference between {this.AgeOfUser}'s and kescha's age is {this.AgeDifference}");
+        Console.WriteLine($"The difference between {this.NameOfUser}'s and kescha's age is {this.AgeDifference}");
     }
     public void FriendsOfKescha()
     {
